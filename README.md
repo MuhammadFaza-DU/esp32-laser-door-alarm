@@ -4,11 +4,11 @@
 
 Ini prototipe meja untuk tugas akhir. ESP32 membaca cahaya laser merah lewat fotodioda. Alur alarmnya juga bisa dicoba di Wokwi tanpa perangkat fisik.
 
-[Coba simulasi Wokwi](#coba-di-wokwi) · [Lihat sambungan kabel](#sambungan) · [Buka skematik fisik](#lampiran-skematik-fisik)
+[Lihat sambungan kabel](#sambungan) · [Buka skematik fisik](#lampiran-skematik-fisik) · [Coba simulasi Wokwi](#coba-di-wokwi)
 
-![Simulasi Wokwi: ESP32 terhubung ke potensiometer, sakelar geser, dan LED merah](docs/assets/wokwi-simulation.png)
+<img src="docs/assets/prototipe-meja.jpg" width="480" alt="ESP32 di samping breadboard berisi transistor KN2222A, buzzer, switch button, dan fotodioda">
 
-*Simulasi Wokwi. Potensiometer mewakili sinyal fotodioda, sakelar geser mewakili switch button, dan LED merah mewakili buzzer.*
+*Rangkaian asli yang diuji di meja. Untuk mengikuti jalur tiap kabel, gunakan [tabel sambungan](#sambungan) dan [skematik fisik](#lampiran-skematik-fisik).*
 
 ## Skematik, firmware, dan simulasi
 
@@ -20,13 +20,6 @@ Ini prototipe meja untuk tugas akhir. ESP32 membaca cahaya laser merah lewat fot
 | [Wokwi](wokwi/) | Simulasi logika. Potensiometer menggantikan tegangan fotodioda; LED merah mewakili status buzzer. |
 | [Sketch Arduino](firmware/DoorAlarm/DoorAlarm.ino) | Firmware ESP32 yang dipakai di prototipe meja. |
 | [Catatan pengujian](docs/bench-tests.md) | Angka pengukuran, hasil uji, dan cara mengecek masalah wiring. |
-
-<details>
-<summary>Foto rangkaian meja</summary>
-
-![ESP32 di samping breadboard berisi transistor, buzzer, switch button, dan fotodioda](docs/assets/prototipe-meja.jpg)
-
-</details>
 
 ## Komponen
 
