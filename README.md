@@ -1,8 +1,14 @@
-# Alarm Pintu Laser dengan ESP32
+# Alarm Pintu ESP32 dengan Sensor Laser
 
-Prototipe meja untuk tugas akhir. Fotodioda membaca berkas laser merah. Ketika berkas terputus, ESP32 menyalakan buzzer. Buzzer tetap berbunyi meski berkas kembali, sampai **switch button** dipencet.
+**Berkas laser putus, buzzer menyala.** Buzzer tetap berbunyi meski berkas sudah kembali, sampai **switch button** dipencet.
 
-![Skematik fisik: fotodioda di GPIO34, switch button di GPIO21, dan buzzer lewat KN2222A di GPIO22](docs/diagrams/door-alarm.svg)
+Ini prototipe meja untuk tugas akhir. ESP32 membaca cahaya laser merah lewat fotodioda. Alur alarmnya juga bisa dicoba di Wokwi tanpa perangkat fisik.
+
+[Coba simulasi Wokwi](#coba-di-wokwi) · [Lihat sambungan kabel](#sambungan) · [Buka skematik fisik](#lampiran-skematik-fisik)
+
+![Simulasi Wokwi: ESP32 terhubung ke potensiometer, sakelar geser, dan LED merah](docs/assets/wokwi-simulation.png)
+
+*Simulasi Wokwi. Potensiometer mewakili sinyal fotodioda, sakelar geser mewakili switch button, dan LED merah mewakili buzzer.*
 
 ## Skematik, firmware, dan simulasi
 
@@ -63,3 +69,7 @@ Buat [proyek ESP32 baru](https://wokwi.com/projects/new/esp32), lalu salin isi [
 Di Wokwi, sakelar virtual memberi level tinggi atau rendah ke GPIO21 dan sketch memakai pull-up internal. Rangkaian fisik tetap memakai switch button momentary dengan resistor 10 kΩ eksternal. Simulasi tidak mengukur optik laser, kepekaan fotodioda, tegangan `VIN`, atau kemampuan transistor menggerakkan buzzer fisik.
 
 > **Batas penggunaan:** ini prototipe meja, belum diuji sebagai alarm pintu terpasang. Untuk demonstrasi dengan laser, gunakan pemancar yang kelas keselamatannya jelas dan penghalang berkas buram. Jangan gunakan laser tanpa label melintasi jalur orang.
+
+## Lampiran: Skematik fisik
+
+![Skematik fisik: fotodioda di GPIO34, switch button di GPIO21, dan buzzer lewat KN2222A di GPIO22](docs/diagrams/door-alarm.svg)
