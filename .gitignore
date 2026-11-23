@@ -1,0 +1,15 @@
+# Local reference photos, not publication assets.
+/WhatsApp Image *.jpeg
+/laser.jpeg
+/docs/LESSONS.md
+/docs/publication-plan.md
+/docs/superpowers/plans/
+
+/.arduino/
+/build/
+*.exe
+/door-alarm-test
+__pycache__/
+*-backups/
+*.kicad_prl
+*.lck

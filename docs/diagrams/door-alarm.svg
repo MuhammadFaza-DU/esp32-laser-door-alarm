@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1125 790" role="img" aria-labelledby="title desc">
+<title id="title">Skematik alarm pintu ESP32</title>
+<desc id="desc">Fotodioda ke D34, switch button ke D21, buzzer melalui KN2222A ke D22. Laser hanya terhubung secara optik.</desc>
+<rect width="1125" height="790" fill="#fff"/>
+<style>text{font-family:system-ui,sans-serif;fill:#183047} .wire{stroke:#007567;stroke-width:2.1;fill:none;stroke-linejoin:round} .part{stroke:#183047;stroke-width:2;fill:none;stroke-linejoin:round} .net{fill:#006759;font:600 12px ui-monospace,monospace} .note{font-size:11px} .ref{font:600 11px ui-monospace,monospace} .heading{font-weight:650;font-size:16px}</style>
+<path d="M40 77H1085 M40 722H1085" stroke="#c5d2d7"/>
+<text x="40" y="60" class="" font-size="29" font-weight="750">Alarm pintu ESP32</text>
+<text x="1085" y="60" class="net" text-anchor="end">SKEMATIK · PROTOTIPE MEJA</text>
+<text x="40" y="115" class="heading" >01  Penerima berkas</text>
+<text x="40" y="450" class="heading" >02  Switch button</text>
+<text x="725" y="115" class="heading" >03  Driver buzzer</text>
+<text x="40" y="140" class="note" >Laser merah → D1 (optik)</text>
+<text x="725" y="140" class="note" >VIN diukur 4,5 V saat buzzer diuji.</text>
+<text x="890" y="350" class="note" >Garis dioda ke VIN</text>
+<text x="925" y="555" class="note" >B ← D22</text>
+<text x="925" y="590" class="note" >E → GND</text>
+<text x="925" y="625" class="note" >C → BZ1 negatif</text>
+<text x="425" y="520" class="note" >USB-C menyuplai board.</text>
+<text x="425" y="545" class="note" >VIN ≠ 3V3.</text>
+<text x="40" y="750" class="note" >Prototipe meja | Laser tidak terhubung secara listrik ke ESP32.</text>
+<text x="1085" y="750" class="net" text-anchor="end">GPIO 34 / 21 / 22</text>
+<polyline class="wire" points="155,160 155,195"/>
+<polyline class="wire" points="155,255 155,290 155,315"/>
+<polyline class="wire" points="155,290 305,290"/>
+<polyline class="wire" points="155,375 155,405"/>
+<polyline class="wire" points="145,480 145,510"/>
+<polyline class="wire" points="145,570 145,595 145,615"/>
+<polyline class="wire" points="145,595 305,595"/>
+<polyline class="wire" points="145,675 145,700"/>
+<polyline class="wire" points="370,295 420,295"/>
+<polyline class="wire" points="370,345 420,345"/>
+<polyline class="wire" points="370,395 420,395"/>
+<polyline class="wire" points="620,295 660,295"/>
+<polyline class="wire" points="620,370 660,370"/>
+<polyline class="wire" points="620,445 660,445"/>
+<polyline class="wire" points="875,170 875,195 875,220"/>
+<polyline class="wire" points="875,195 990,195 990,220"/>
+<polyline class="wire" points="875,280 875,325 875,480"/>
+<polyline class="wire" points="990,280 990,325 875,325"/>
+<polyline class="wire" points="640,515 675,515"/>
+<polyline class="wire" points="735,515 770,515 815,515"/>
+<polyline class="wire" points="770,515 770,550"/>
+<polyline class="wire" points="770,610 770,660"/>
+<polyline class="wire" points="875,550 875,660"/>
+<circle cx="155" cy="290" r="3.3" fill="#007567"/>
+<circle cx="145" cy="595" r="3.3" fill="#007567"/>
+<circle cx="875" cy="195" r="3.3" fill="#007567"/>
+<circle cx="875" cy="325" r="3.3" fill="#007567"/>
+<circle cx="770" cy="515" r="3.3" fill="#007567"/>
+<text x="155" y="156.75" class="net" >3V3</text>
+<text x="305" y="286.75" class="net" >D34</text>
+<text x="155" y="401.75" class="net" >GND</text>
+<text x="145" y="476.75" class="net" >3V3</text>
+<text x="305" y="591.75" class="net" >D21</text>
+<text x="145" y="696.75" class="net" >GND</text>
+<text x="370" y="291.75" class="net" >3V3</text>
+<text x="370" y="341.75" class="net" >D34</text>
+<text x="370" y="391.75" class="net" >D21</text>
+<text x="660" y="291.75" class="net" >VIN</text>
+<text x="660" y="366.75" class="net" >D22</text>
+<text x="660" y="441.75" class="net" >GND</text>
+<text x="875" y="166.75" class="net" >VIN</text>
+<text x="640" y="511.75" class="net" >D22</text>
+<text x="770" y="656.75" class="net" >GND</text>
+<text x="875" y="656.75" class="net" >GND</text>
+<polyline class="part" points="450,260 590,260 590,480 450,480 450,260"/>
+<polyline class="part" points="420,295 450,295"/>
+<text x="455.5" y="299.25" class="ref" text-anchor="start">3V3</text>
+<polyline class="part" points="420,345 450,345"/>
+<text x="455.5" y="349.25" class="ref" text-anchor="start">D34</text>
+<polyline class="part" points="420,395 450,395"/>
+<text x="455.5" y="399.25" class="ref" text-anchor="start">D21</text>
+<polyline class="part" points="620,370 590,370"/>
+<text x="584.5" y="374.25" class="ref" text-anchor="end">D22</text>
+<polyline class="part" points="620,295 590,295"/>
+<text x="584.5" y="299.25" class="ref" text-anchor="end">VIN</text>
+<polyline class="part" points="620,445 590,445"/>
+<text x="584.5" y="449.25" class="ref" text-anchor="end">GND</text>
+<text x="440" y="228.5" class="ref" >U1</text>
+<text x="440" y="242" class="note" >ESP32-WROOM-32 DevKit</text>
+<polyline class="part" points="140,210 170,210"/>
+<polyline class="part" points="155,210 140,240 170,240 155,210"/>
+<polyline class="part" points="115,210 135,220 130,210"/>
+<polyline class="part" points="120,230 140,240 135,230"/>
+<polyline class="part" points="155,195 155,210"/>
+<polyline class="part" points="155,255 155,240"/>
+<text x="195" y="218.5" class="ref" >D1</text>
+<text x="195" y="232" class="note" >Fotodioda Si</text>
+<polyline class="part" points="155,330 165,330 165,360 145,360 145,330 155,330"/>
+<polyline class="part" points="155,315 155,330"/>
+<polyline class="part" points="155,375 155,360"/>
+<text x="195" y="333.5" class="ref" >R1</text>
+<text x="195" y="347" class="note" >47 kΩ</text>
+<polyline class="part" points="145,525 155,525 155,555 135,555 135,525 145,525"/>
+<polyline class="part" points="145,510 145,525"/>
+<polyline class="part" points="145,570 145,555"/>
+<text x="190" y="528.5" class="ref" >R2</text>
+<text x="190" y="542" class="note" >10 kΩ</text>
+<polyline class="part" points="145,630 145,635"/>
+<polyline class="part" points="145,660 145,655"/>
+<polyline class="part" points="145,655 160,635"/>
+<polyline class="part" points="145,615 145,630"/>
+<polyline class="part" points="145,675 145,660"/>
+<text x="190" y="633.5" class="ref" >SW1</text>
+<text x="190" y="647" class="note" >Switch button</text>
+<polyline class="part" points="875,235 885,235 885,265 875,265"/>
+<polyline class="part" points="885,240 895,240 905,230 905,270 895,260 885,260"/>
+<polyline class="part" points="860,230 860,240"/>
+<polyline class="part" points="855,235 865,235"/>
+<polyline class="part" points="875,220 875,235"/>
+<polyline class="part" points="875,280 875,265"/>
+<text x="750" y="238.5" class="ref" >BZ1</text>
+<text x="750" y="252" class="note" >TMB12A05</text>
+<polyline class="part" points="975,235 1005,235"/>
+<polyline class="part" points="990,235 975,265 1005,265 990,235"/>
+<polyline class="part" points="990,220 990,235"/>
+<polyline class="part" points="990,280 990,265"/>
+<text x="1010" y="268.5" class="ref" >D2</text>
+<text x="1010" y="282" class="note" >Dioda pelindung</text>
+<polyline class="part" points="690,515 690,505 720,505 720,525 690,525 690,515"/>
+<polyline class="part" points="675,515 690,515"/>
+<polyline class="part" points="735,515 720,515"/>
+<text x="670" y="468.5" class="ref" >R3</text>
+<text x="670" y="482" class="note" >680 Ω</text>
+<polyline class="part" points="770,565 780,565 780,595 760,595 760,565 770,565"/>
+<polyline class="part" points="770,550 770,565"/>
+<polyline class="part" points="770,610 770,595"/>
+<text x="665" y="568.5" class="ref" >R4</text>
+<text x="665" y="582" class="note" >100 kΩ</text>
+<polyline class="part" points="835,515 855,515"/>
+<polyline class="part" points="855,495 855,535"/>
+<polyline class="part" points="855,505 875,490"/>
+<polyline class="part" points="855,525 875,540"/>
+<polyline class="part" points="860,535 875,540 870,525"/>
+<polyline class="part" points="875,550 875,540"/>
+<polyline class="part" points="815,515 835,515"/>
+<polyline class="part" points="875,480 875,490"/>
+<text x="905" y="503.5" class="ref" >Q1</text>
+<text x="905" y="517" class="note" >KN2222A</text>
+</svg>

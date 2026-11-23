@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "author": "Alarm Pintu ESP32",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 9.6, "left": 48, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "beam", "top": -19.2, "left": -115.2, "attrs": { "value": "1023" } },
+    { "type": "wokwi-slide-switch", "id": "mute", "top": 115.2, "left": 211.2, "attrs": { "bounce": "0" } },
+    { "type": "wokwi-led", "id": "alarm", "top": 9.6, "left": 211.2, "attrs": { "color": "red", "label": "ALARM" } },
+    { "type": "wokwi-resistor", "id": "limit", "top": 76.8, "left": 211.2, "attrs": { "value": "330" } }
+  ],
+  "connections": [
+    [ "beam:SIG", "esp:D34", "purple", [ "v57.6", "h96" ] ],
+    [ "beam:VCC", "esp:3V3", "red", [ "v19.2", "h115.2", "v134.4" ] ],
+    [ "beam:GND", "esp:GND.2", "black", [ "v134.4", "h105.6" ] ],
+    [ "mute:1", "esp:3V3", "red", [ "v48", "h-67.2" ] ],
+    [ "mute:2", "esp:D21", "blue", [ "v19.2", "h-48", "v-86.4" ] ],
+    [ "mute:3", "esp:GND.1", "black", [ "v38.4", "h-86.4" ] ],
+    [ "esp:D22", "limit:1", "orange", [ "h19.2", "v0" ] ],
+    [ "limit:2", "alarm:A", "orange", [ "v-19.2", "h-28.8" ] ],
+    [ "alarm:C", "esp:GND.2", "black", [ "v76.8", "h-67.2" ] ]
+  ],
+  "dependencies": {}
+}
