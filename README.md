@@ -1,8 +1,6 @@
 # Alarm Pintu ESP32 dengan Sensor Laser
 
-**Berkas laser putus, buzzer menyala.** Buzzer tetap berbunyi meski berkas sudah kembali, sampai **switch button** dipencet.
-
-Ini prototipe meja untuk tugas akhir. ESP32 membaca cahaya laser merah lewat fotodioda. Alur alarmnya juga bisa dicoba di Wokwi tanpa perangkat fisik.
+**Prototipe tugas akhir selesai dan sudah diuji di meja.** Saat berkas laser merah ke fotodioda terputus, ESP32 menyalakan buzzer. Buzzer tetap berbunyi setelah berkas kembali dan berhenti saat **switch button** dipencet. Rincian pengukuran dan hasilnya ada di [catatan uji meja](docs/bench-tests.md).
 
 [Lihat sambungan kabel](#sambungan) · [Buka skematik fisik](#lampiran-skematik-fisik) · [Coba simulasi Wokwi](#coba-di-wokwi)
 
@@ -26,12 +24,12 @@ Ini prototipe meja untuk tugas akhir. ESP32 membaca cahaya laser merah lewat fot
 | Jumlah | Komponen | Fungsi |
 |---:|---|---|
 | 1 | ESP32 DevKit dengan modul ESP32-WROOM-32 | Membaca sensor dan switch button, lalu mengontrol buzzer. |
-| 1 | Fotodioda silikon, dua kaki | Mengubah cahaya jadi arus. Tipe persis unit belum terkonfirmasi; BPW34 adalah contoh. |
+| 1 | Fotodioda silikon, dua kaki | Mengubah cahaya jadi arus. |
 | 1 | Pemancar laser merah terpisah | Memberi berkas ke fotodioda. Tidak disambungkan ke ESP32. |
 | 1 | Switch button momentary | Menghubungkan GPIO21 ke GND saat dipencet. |
 | 1 | Buzzer aktif `TMB12A05` | Menghasilkan bunyi saat mendapat daya DC. |
 | 1 | Transistor NPN `KN2222A` | Menyambungkan sisi negatif buzzer ke GND saat GPIO22 aktif. |
-| 1 | Dioda pelindung | Dipasang paralel dengan buzzer. Tipe persis unit belum terkonfirmasi; 1N5819 adalah contoh. |
+| 1 | Dioda pelindung | Dipasang paralel dengan buzzer untuk membatasi lonjakan tegangan saat arus diputus. |
 | 4 | Resistor 47 kΩ, 10 kΩ, 680 Ω, dan 100 kΩ | Masing-masing satu. |
 | 1 set | Breadboard, jumper, dan kabel USB-C data | Rangkaian meja, daya, dan upload. |
 
@@ -61,7 +59,7 @@ Buat [proyek ESP32 baru](https://wokwi.com/projects/new/esp32), lalu salin isi [
 
 Di Wokwi, sakelar virtual memberi level tinggi atau rendah ke GPIO21 dan sketch memakai pull-up internal. Rangkaian fisik tetap memakai switch button momentary dengan resistor 10 kΩ eksternal. Simulasi tidak mengukur optik laser, kepekaan fotodioda, tegangan `VIN`, atau kemampuan transistor menggerakkan buzzer fisik.
 
-> **Batas penggunaan:** ini prototipe meja, belum diuji sebagai alarm pintu terpasang. Untuk demonstrasi dengan laser, gunakan pemancar yang kelas keselamatannya jelas dan penghalang berkas buram. Jangan gunakan laser tanpa label melintasi jalur orang.
+> **Cakupan uji:** hasil di atas berasal dari prototipe meja, bukan dari pemasangan di pintu. Model persis fotodioda dan dioda pelindung belum dikonfirmasi. Untuk demonstrasi, gunakan pemancar laser dengan kelas keselamatan yang jelas dan penghalang berkas buram. Jangan gunakan laser tanpa label melintasi jalur orang.
 
 ## Lampiran: Skematik fisik
 
