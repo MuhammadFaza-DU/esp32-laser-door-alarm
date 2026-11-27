@@ -1,8 +1,10 @@
 # Alarm Pintu ESP32 dengan Sensor Laser
 
-**Prototipe tugas akhir selesai dan sudah diuji di meja.** Saat berkas laser merah ke fotodioda terputus, ESP32 menyalakan buzzer. Buzzer tetap berbunyi setelah berkas kembali dan berhenti saat **switch button** dipencet. Rincian pengukuran dan hasilnya ada di [catatan uji meja](docs/bench-tests.md).
+**Berkas laser putus, alarm berbunyi.** Buzzer tetap menyala meski berkas kembali mengenai fotodioda, sampai **switch button** ditekan.
 
-[Lihat sambungan kabel](#sambungan) · [Buka skematik fisik](#lampiran-skematik-fisik) · [Coba simulasi Wokwi](#coba-di-wokwi)
+Prototipe tugas akhir ini sudah selesai dan diuji di meja. [Lihat hasil pengujian](docs/bench-tests.md).
+
+[Sambungan kabel](#sambungan) · [Skematik fisik](#lampiran-skematik-fisik) · [Simulasi Wokwi](#coba-di-wokwi)
 
 <img src="docs/assets/prototipe-meja.jpg" width="480" alt="ESP32 di samping breadboard berisi transistor KN2222A, buzzer, switch button, dan fotodioda">
 
